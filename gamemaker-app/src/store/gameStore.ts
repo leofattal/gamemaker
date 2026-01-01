@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import { GameProject, GameObject, GameRule, EditorState, GameScene } from '../types';
+import type { GameProject, GameObject, GameRule, EditorState, GameScene } from '../types';
 
 interface GameStore {
   // Project data

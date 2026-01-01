@@ -1,5 +1,5 @@
 import Phaser from 'phaser';
-import { GameProject, GameObject } from '../types';
+import type { GameProject } from '../types';
 import { MainScene } from './scenes/MainScene';
 
 export class GameEngine {

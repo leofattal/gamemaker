@@ -1,5 +1,5 @@
 import Phaser from 'phaser';
-import { GameProject, GameObject } from '../../types';
+import type { GameProject, GameObject } from '../../types';
 
 export class MainScene extends Phaser.Scene {
   private projectData: GameProject | null = null;
@@ -237,7 +237,7 @@ export class MainScene extends Phaser.Scene {
   }
 
   private collectItem(
-    player: Phaser.Types.Physics.Arcade.GameObjectWithBody | Phaser.Tilemaps.Tile,
+    _player: Phaser.Types.Physics.Arcade.GameObjectWithBody | Phaser.Tilemaps.Tile,
     item: Phaser.Types.Physics.Arcade.GameObjectWithBody | Phaser.Tilemaps.Tile
   ) {
     const itemObj = item as Phaser.GameObjects.Rectangle;
@@ -256,7 +256,7 @@ export class MainScene extends Phaser.Scene {
   }
 
   private hitEnemy(
-    player: Phaser.Types.Physics.Arcade.GameObjectWithBody | Phaser.Tilemaps.Tile,
+    _player: Phaser.Types.Physics.Arcade.GameObjectWithBody | Phaser.Tilemaps.Tile,
     enemy: Phaser.Types.Physics.Arcade.GameObjectWithBody | Phaser.Tilemaps.Tile
   ) {
     const damage = (enemy as Phaser.GameObjects.Rectangle).getData('properties').damage || 1;
@@ -288,8 +288,8 @@ export class MainScene extends Phaser.Scene {
   }
 
   private hitHazard(
-    player: Phaser.Types.Physics.Arcade.GameObjectWithBody | Phaser.Tilemaps.Tile,
-    hazard: Phaser.Types.Physics.Arcade.GameObjectWithBody | Phaser.Tilemaps.Tile
+    _player: Phaser.Types.Physics.Arcade.GameObjectWithBody | Phaser.Tilemaps.Tile,
+    _hazard: Phaser.Types.Physics.Arcade.GameObjectWithBody | Phaser.Tilemaps.Tile
   ) {
     this.lives -= 1;
     if (this.livesText) {
@@ -304,8 +304,8 @@ export class MainScene extends Phaser.Scene {
   }
 
   private reachGoal(
-    player: Phaser.Types.Physics.Arcade.GameObjectWithBody | Phaser.Tilemaps.Tile,
-    goal: Phaser.Types.Physics.Arcade.GameObjectWithBody | Phaser.Tilemaps.Tile
+    _player: Phaser.Types.Physics.Arcade.GameObjectWithBody | Phaser.Tilemaps.Tile,
+    _goal: Phaser.Types.Physics.Arcade.GameObjectWithBody | Phaser.Tilemaps.Tile
   ) {
     this.winGame();
   }

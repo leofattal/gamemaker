@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { useGameStore } from '../../store/gameStore';
-import { GameObject } from '../../types';
+import type { GameObject } from '../../types';
 
 const Canvas: React.FC = () => {
   const canvasRef = useRef<HTMLDivElement>(null);

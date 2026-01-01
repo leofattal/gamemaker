@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { User, Box, Coins, Ghost, Flag, Zap, Image } from 'lucide-react';
-import { ObjectType } from '../../types';
+import type { ObjectType } from '../../types';
 
 interface ObjectTemplate {
   type: ObjectType;
