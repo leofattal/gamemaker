@@ -111,7 +111,101 @@ const createDefaultProject = (template: 'platformer' | 'topdown' | 'clicker'): G
         background: {
           color: '#87CEEB',
         },
-        objects: [],
+        objects: template === 'platformer' ? [
+          // Ground platform
+          {
+            id: 'platform-1',
+            name: 'Ground',
+            type: 'platform',
+            x: 0,
+            y: 550,
+            width: 800,
+            height: 50,
+            properties: {
+              solid: true,
+              static: true,
+              gravity: false,
+            },
+          },
+          // Player
+          {
+            id: 'player-1',
+            name: 'Player',
+            type: 'player',
+            x: 100,
+            y: 400,
+            width: 32,
+            height: 48,
+            properties: {
+              solid: true,
+              static: false,
+              gravity: true,
+              speed: 200,
+              jumpForce: 400,
+            },
+          },
+          // Left platform
+          {
+            id: 'platform-2',
+            name: 'Platform 1',
+            type: 'platform',
+            x: 200,
+            y: 450,
+            width: 150,
+            height: 20,
+            properties: {
+              solid: true,
+              static: true,
+              gravity: false,
+            },
+          },
+          // Right platform
+          {
+            id: 'platform-3',
+            name: 'Platform 2',
+            type: 'platform',
+            x: 450,
+            y: 350,
+            width: 150,
+            height: 20,
+            properties: {
+              solid: true,
+              static: true,
+              gravity: false,
+            },
+          },
+          // Collectible
+          {
+            id: 'collectible-1',
+            name: 'Coin',
+            type: 'collectible',
+            x: 300,
+            y: 400,
+            width: 24,
+            height: 24,
+            properties: {
+              solid: false,
+              static: false,
+              gravity: false,
+              value: 10,
+            },
+          },
+          // Goal
+          {
+            id: 'goal-1',
+            name: 'Goal',
+            type: 'goal',
+            x: 700,
+            y: 450,
+            width: 50,
+            height: 100,
+            properties: {
+              solid: false,
+              static: false,
+              gravity: false,
+            },
+          },
+        ] : [],
       },
     ],
     rules: [],
