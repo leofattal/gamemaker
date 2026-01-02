@@ -121,6 +121,8 @@ const createDefaultProject = (template: 'platformer' | 'topdown' | 'clicker'): G
             y: 550,
             width: 800,
             height: 50,
+            sprite: '',
+            layer: 0,
             properties: {
               solid: true,
               static: true,
@@ -136,6 +138,8 @@ const createDefaultProject = (template: 'platformer' | 'topdown' | 'clicker'): G
             y: 400,
             width: 32,
             height: 48,
+            sprite: '',
+            layer: 1,
             properties: {
               solid: true,
               static: false,
@@ -153,6 +157,8 @@ const createDefaultProject = (template: 'platformer' | 'topdown' | 'clicker'): G
             y: 450,
             width: 150,
             height: 20,
+            sprite: '',
+            layer: 0,
             properties: {
               solid: true,
               static: true,
@@ -168,6 +174,8 @@ const createDefaultProject = (template: 'platformer' | 'topdown' | 'clicker'): G
             y: 350,
             width: 150,
             height: 20,
+            sprite: '',
+            layer: 0,
             properties: {
               solid: true,
               static: true,
@@ -183,6 +191,8 @@ const createDefaultProject = (template: 'platformer' | 'topdown' | 'clicker'): G
             y: 400,
             width: 24,
             height: 24,
+            sprite: '',
+            layer: 1,
             properties: {
               solid: false,
               static: false,
@@ -199,6 +209,8 @@ const createDefaultProject = (template: 'platformer' | 'topdown' | 'clicker'): G
             y: 450,
             width: 50,
             height: 100,
+            sprite: '',
+            layer: 0,
             properties: {
               solid: false,
               static: false,
